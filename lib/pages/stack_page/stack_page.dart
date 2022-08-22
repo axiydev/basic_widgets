@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StackPage extends StatefulWidget {
@@ -29,6 +30,12 @@ class _StackPageState extends State<StackPage> {
           ],
         ),
       )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/expand');
+        },
+        child: const Icon(CupertinoIcons.add_circled),
+      ),
     );
   }
 }
